@@ -5,7 +5,13 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-unibridge-blue">
+    <section 
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-unibridge-blue bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('https://images.pexels.com/photos/723443/pexels-photo-723443.jpeg')" }}
+    >
+      {/* Blue Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/60 to-blue-900/30 z-0 pointer-events-none"></div>
+
       {/* Dynamic Background Blob */}
       <div className="absolute top-[-10%] right-[-5%] w-[800px] h-[800px] bg-unibridge-red/20 blob-shape blur-3xl z-0 pointer-events-none"></div>
       <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-blue-500/20 blob-shape blur-3xl z-0 pointer-events-none" style={{ animationDelay: '2s' }}></div>
